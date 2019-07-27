@@ -14,3 +14,7 @@ The project will show when you run the gradeint descent and OLS, that gradeint d
 ------------------------------------------------------------
 
 knnclassification- This project will show you how to use KNN to classify Pulsar starts. It will also show how to use KNN with techniques such as grid search, Cross-validations and so forth.
+
+------------------------------------------------------------
+
+KNN-Regression- This project will use KNN to predict prices by connect knn with regression
