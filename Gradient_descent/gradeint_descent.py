@@ -19,54 +19,51 @@ corra=data.corr()["MEDV"] #We can see Medv and lstat has highest corrlation
 
 #plt.scatter(data["LSTAT"],data["MEDV"])
 
-
+#The following is how to implment gradient descent
 def gradient_descent(x,y):
-    m_curr = b_curr = 0
-    iterations = 10000
-    n = len(x)
-    learning_rate = 0.002
+    m_curr = b_curr = 0 #We will have intercept and slope at 0
+    iterations = 10000 #We will run this many iterations to find the optimal m and b
+    n = len(x) #Used for formula
+    learning_rate = 0.002 #The learning rate will be low to avoid mistakes
 
-    for i in range(iterations):
-        y_predicted = m_curr * x + b_curr
-        cost = (1/n) * sum([val**2 for val in (y-y_predicted)])
-        md = -(2/n)*sum(x*(y-y_predicted))
-        bd = -(2/n)*sum(y-y_predicted)
-        m_curr = m_curr - learning_rate * md
-        b_curr = b_curr - learning_rate * bd
-        print ("m {}, b {}, cost {} iteration {}".format(m_curr,b_curr,cost, i))
+    for i in range(iterations):#We will run this for loop for the specified iterations to get our values
+        y_predicted = m_curr * x + b_curr #This is the formula for linear regression.Where we are trying to find optimal values
+        cost = (1/n) * sum([val**2 for val in (y-y_predicted)]) #This is the cost function for linear that we will optimize
+        md = -(2/n)*sum(x*(y-y_predicted))#optimzing m
+        bd = -(2/n)*sum(y-y_predicted)#optiizing b
+        m_curr = m_curr - learning_rate * md#Updateing the m
+        b_curr = b_curr - learning_rate * bd#updating the b
+        print ("m {}, b {}, cost {} iteration {}".format(m_curr,b_curr,cost, i))##Retrun the updated m and b aswell as cost and iteration for our own purposes
 
 
-b=data["LSTAT"].values
-c=data["MEDV"].values
+b=data["LSTAT"].values #We will use one feature so this is easy to follow
+c=data["MEDV"].values#Target 
 
 
 #print(data.corr()["MEDV"])
-X_train, X_test, y_train, y_test = train_test_split(b, c,test_size=0.20,random_state=42)
-x_train= X_train.reshape(-1, 1)
-y_train= y_train.reshape(-1, 1)
+X_train, X_test, y_train, y_test = train_test_split(b, c,test_size=0.20,random_state=42) #This is the OLS function that we will campare with
+x_train= X_train.reshape(-1, 1)#Data pre-preccessing for x
+y_train= y_train.reshape(-1, 1)#data preprocessing for y
 
-reg=LinearRegression()
+reg=LinearRegression()# We will use this to implement our data using OLS
 reg.fit(x_train, y_train)#now we fit our data
 
-#gradient_descent(X_train,y_train)
-x = np.array([1,2,3,4,5])
-y = np.array([5,7,9,11,13])
-gradient_descent(x_train,y_train)
 
-# model evaluation for training set
+
+
+
+# model evaluation for training set for ols
 y_train_predict = reg.predict(x_train)
 
 
-
-
-
-
-
-
-a1=reg.coef_
+#Follwoing is intercept and slope from ols formula
+a1=reg.coef_ 
 a0=reg.intercept_
 
-rmse = mean_squared_error(y_train, y_train_predict)
+rmse = mean_squared_error(y_train, y_train_predict) #Loss function value for ols
+
+gradient_descent(x_train,y_train)#This is our manuel gradient we made to compare with ols
+
 print("co-efficent of linear_regression =",a1)
 print("\n")
 print("intercept of linear_regression =",a0)
