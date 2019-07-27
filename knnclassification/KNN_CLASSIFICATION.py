@@ -8,7 +8,7 @@ from sklearn import metrics
 from sklearn.grid_search import GridSearchCV
 from sklearn.model_selection import cross_val_score
 
-#This project looks will classify stars from its features using KNN CLASSIFIER.
+#This project will classify stars from its features using KNN CLASSIFIER.
 
 df=pd.read_csv("pulsar_stars.csv")#Reading data
 
@@ -29,7 +29,7 @@ best_n=max(best_n.items(), key=operator.itemgetter(1))[0]#This will find the bes
 #NOTE THE RESULT WE GOT WAS THAT 9 WAS BEST NEIGBOUR.AND IN GRID SEARCH THEY TOLD US THIS
 
 
-#The follwoing is using KNN through tradeional train and test
+#The follwoing is using KNN through general train and test
 '''
 model = KNeighborsClassifier(n_neighbors=3)#wE WILL ONLY USE 3 NEIGBOURS.NOTE CLASSIFICATION WORKS BY VOTING MAHORITY
 
@@ -76,7 +76,7 @@ print (grid.best_params_)#This will tell us which neigbour got the highest accur
 print (grid.best_estimator_)#This will us the infomration for which specific paramenter we should put for our hyperparameter in the KNN function
 '''
 
-#Implementing grid
+#The follwoing shows how to Implement grid
 
 '''
 #The parameters under are based on what the grid search told us to put as metrics. Which i have below
