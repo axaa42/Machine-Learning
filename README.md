@@ -18,3 +18,8 @@ knnclassification- This project will show you how to use KNN to classify Pulsar 
 ------------------------------------------------------------
 
 KNN-Regression- This project will use KNN to predict prices by connect knn with regression
+
+
+---------------------------------------------------------------
+
+Logistic-Regression- This project will classify cancer tumours based on its features using the logistic function.
