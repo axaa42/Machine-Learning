@@ -10,3 +10,7 @@ We note from this project that OLS is computationally expensive whilst graident 
 
 The project will show when you run the gradeint descent and OLS, that gradeint descent takes longer and should be avoided for Linear Regression algorithm unless we use C++ where we can improve the performance somewhat
 
+
+------------------------------------------------------------
+
+knnclassification- This project will show you how to use KNN to classify Pulsar starts. It will also show how to use KNN with techniques such as grid search, Cross-validations and so forth.
