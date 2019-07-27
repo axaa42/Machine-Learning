@@ -1,5 +1,5 @@
 # Machine-Learning
-Weather forecast is a way to use linear regression to predict the temperature from its other features. The project will also show how to do dummy varibles, avoding multicolinarity, finding the correct features and so forth.
+Weather forecast- This project will use linear regression to predict the temperature from its other features. The project will also show how to do dummy varibles, avoding multicolinarity, finding the correct features and so forth.
 
 ---------------------------------------------------------
 
