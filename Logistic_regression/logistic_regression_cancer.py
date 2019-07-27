@@ -44,7 +44,7 @@ sensitivity= tp/(tp+fn)
 print("Specificity: ",specificity)
 print("Sensitivity: ",sensitivity)
 #Good at predicting cancers that malign.but not at beingn.
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
-print("Precision:",metrics.precision_score(y_test, y_pred))
-print("Recall:",metrics.recall_score(y_test, y_pred))
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred)) #This prints out the accuracy of our model
+print("Precision:",metrics.precision_score(y_test, y_pred))#The precision of our model
+print("Recall:",metrics.recall_score(y_test, y_pred))#The recall
 
