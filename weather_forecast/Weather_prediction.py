@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import seaborn as sns
 
+#This project will predict temperature from its other features using linear regression.
+
 data=pd.read_csv("weatherHistory.csv")
 
 
