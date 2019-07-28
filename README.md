@@ -4,7 +4,7 @@ Weather forecast- This project will use linear regression to predict the tempera
 ---------------------------------------------------------
 
 Gradient Descent- This project will show how to implement gradient descent. I have used Linear Regression as an example to show how you can implement gradeint descent in linear regression istead of OLS.
-
+I have used 2 examples to show this.
 
 We note from this project that OLS is computationally expensive whilst graident descent is only used when there are lots of features for effiency.
 
