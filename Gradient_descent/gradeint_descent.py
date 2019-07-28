@@ -33,7 +33,7 @@ def gradient_descent(x,y):
         bd = -(2/n)*sum(y-y_predicted)#optiizing b
         m_curr = m_curr - learning_rate * md#Updateing the m
         b_curr = b_curr - learning_rate * bd#updating the b
-        print ("m {}, b {}, cost {} iteration {}".format(m_curr,b_curr,cost, i))##Retrun the updated m and b aswell as cost and iteration for our own purposes
+        print ("m {}, b {}, cost {} iteration {}".format(m_curr,b_curr,cost, i))#Retrun the updated m and b aswell as cost and iteration for our own purposes
 
 
 b=data["LSTAT"].values #We will use one feature so this is easy to follow
